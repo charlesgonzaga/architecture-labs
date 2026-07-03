@@ -11,3 +11,13 @@ Este repositório tem como objetivo demonstrar conhecimento em:
 - DDD
 - CQRS
 - Arquitetura Orientada a Eventos
+
+## Roadmap
+
+- [x] 001 - Clean Architecture
+- [ ] 002 - CQRS
+- [ ] 003 - RabbitMQ
+- [ ] 004 - Outbox Pattern
+- [ ] 005 - Saga Pattern
+- [ ] 006 - Event Sourcing
+- [ ] 007 - Modular Monolith
