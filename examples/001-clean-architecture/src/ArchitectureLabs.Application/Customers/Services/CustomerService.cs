@@ -34,4 +34,21 @@ public sealed class CustomerService : ICustomerService
             customer.Name,
             customer.Email);
     }
+
+    public async Task<CustomerResponse?> GetByIdAsync(
+        Guid id,
+        CancellationToken cancellationToken)
+    {
+        var customer = await _repository.GetByIdAsync(
+            CustomerId.Create(id),
+            cancellationToken);
+
+        if (customer is null)
+            return null;
+
+        return new CustomerResponse(
+            customer.Id.Value,
+            customer.Name,
+            customer.Email);
+    }
 }

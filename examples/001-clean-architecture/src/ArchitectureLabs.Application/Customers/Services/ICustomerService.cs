@@ -7,4 +7,8 @@ public interface ICustomerService
     Task<CustomerResponse> CreateAsync(
         CreateCustomerRequest request,
         CancellationToken cancellationToken);
+
+    Task<CustomerResponse?> GetByIdAsync(
+        Guid id,
+        CancellationToken cancellationToken);
 }
