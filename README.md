@@ -16,8 +16,8 @@ Este repositório tem como objetivo demonstrar conhecimento em:
 
 - [x] 001 - Clean Architecture
 - [ ] 002 - CQRS
-- [ ] 003 - RabbitMQ
-- [ ] 004 - Outbox Pattern
-- [ ] 005 - Saga Pattern
-- [ ] 006 - Event Sourcing
+- [ ] 003 - Vertical Slice Architecture
+- [ ] 004 - RabbitMQ
+- [ ] 005 - Outbox Pattern
+- [ ] 006 - Saga Pattern
 - [ ] 007 - Modular Monolith
