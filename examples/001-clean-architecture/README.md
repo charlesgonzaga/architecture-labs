@@ -1,56 +1,87 @@
 # 001 - Clean Architecture
 
-Laboratório prático demonstrando a implementação da Clean Architecture utilizando .NET.
+## Objetivo
 
-## Objetivos
+Demonstrar uma implementação de Clean Architecture clássica utilizando:
 
-- Demonstrar separação de responsabilidades;
-- Aplicar princípios SOLID;
-- Implementar Vertical Slice Architecture;
-- Demonstrar CQRS e validações;
-- Construir uma base evolutiva para os próximos laboratórios.
+- Domain-Driven Design (DDD)
+- Application Services
+- Repository Pattern
+- Entity Framework Core
+- Testes de Integração
+- Testes de Arquitetura
+
+## Arquitetura
+
+```text
+API
+ ↓
+Application Services
+ ↓
+Domain
+ ↓
+Repositories
+ ↓
+Infrastructure
+```
 
 ## Tecnologias
 
-- .NET 9
+- .NET 8
 - ASP.NET Core
 - Entity Framework Core
-- PostgreSQL
-- MediatR
-- FluentValidation
-- Docker
+- EF Core InMemory
+- xUnit
+- FluentAssertions
+- NetArchTest
 
-## Estrutura da Solução
+## Funcionalidades
 
-```text
-src/
-├── ArchitectureLabs.Api
-├── ArchitectureLabs.Application
-├── ArchitectureLabs.Domain
-├── ArchitectureLabs.Infrastructure
-└── ArchitectureLabs.CrossCutting
+- Criar cliente
+- Consultar cliente por Id
 
-tests/
-├── ArchitectureLabs.UnitTests
-├── ArchitectureLabs.IntegrationTests
-└── ArchitectureLabs.ArchitectureTests
+## Endpoints
+
+### Criar cliente
+
+POST `/api/customers`
+
+```json
+{
+  "name": "Charles Gonzaga",
+  "email": "charles@labs.com"
+}
 ```
 
-## Decisões Arquiteturais
+### Consultar cliente
 
-- ADR-001 - Utilizar Clean Architecture.
+GET `/api/customers/{id}`
 
-## Diagramas
+## Persistência
 
-- C4 - Context Diagram
-- C4 - Container Diagram
+Este exemplo utiliza o provedor `EF Core InMemory`.
 
-## Roadmap
+O objetivo é reduzir dependências externas e manter o foco nos conceitos arquiteturais.
 
-- [ ] Customer Aggregate
-- [ ] CQRS
-- [ ] Entity Framework Core
-- [ ] PostgreSQL
-- [ ] Docker Compose
-- [ ] Testes
-- [ ] Observabilidade
+Não é necessário:
+
+- PostgreSQL
+- Docker
+- Migrations
+
+## Testes
+
+Executar todos os testes:
+
+```bash
+dotnet test
+```
+
+## Conceitos demonstrados
+
+- Clean Architecture
+- Domain-Driven Design (DDD)
+- Application Services
+- Repository Pattern
+- Testes de Integração
+- Testes de Arquitetura
