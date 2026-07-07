@@ -15,4 +15,8 @@
     <ProjectReference Include="..\ArchitectureLabs.Infrastructure\ArchitectureLabs.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+  </ItemGroup>
+
 </Project>
