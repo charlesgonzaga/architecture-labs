@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ArchitectureLabs.Api/ArchitectureLabs.Api.csproj" />
+    <Project Path="src/ArchitectureLabs.Application/ArchitectureLabs.Application.csproj" />
+    <Project Path="src/ArchitectureLabs.Domain/ArchitectureLabs.Domain.csproj" />
+    <Project Path="src/ArchitectureLabs.Infrastructure/ArchitectureLabs.Infrastructure.csproj" />
+  </Folder>
+</Solution>
