@@ -1,4 +1,6 @@
+using ArchitectureLabs.Api.Endpoints;
 using ArchitectureLabs.Application.DependencyInjection;
+using ArchitectureLabs.Infrastructure.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 
 builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
@@ -17,5 +20,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.MapCustomerEndpoints();
 
 app.Run();
